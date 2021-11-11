@@ -23,6 +23,20 @@ def buildList(): List[String] = {
     case h::t => h + " "+  stringConcateBypattern(t)
   }
 
+  /**
+   *Write a function that takes an operator that performs operation based on the operator
+   */
+  def calc(operator: String, a: Int, b: Int): Unit  = operator match{
+    case "add" => println(a + b)
+    case "subtract" => println(a-b)
+    case "multiply" => println(a*b)
+    case "divide" => println(a/b)
+  }
+
+calc("add", 2,3)
+
+
+
 //  Reading Files
   val source = Source.fromFile("src/main/index.txt")
   val lines = source.getLines()
